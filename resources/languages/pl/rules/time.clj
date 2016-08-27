@@ -18,11 +18,11 @@
   (intersect %1 %3)
 
   "on <date>" ; on Wed, March 23
-  [#"(?i)w" (dim :time)]
+  [#"(?i)we?" (dim :time)]
   %2 ; does NOT dissoc latent
 
   "on a named-day" ; on a sunday
-  [#"(?i)we" {:form :day-of-week}]
+  [#"(?i)we?" {:form :day-of-week}]
   %2 ; does NOT dissoc latent
 
 
