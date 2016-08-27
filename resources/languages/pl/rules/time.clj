@@ -657,17 +657,17 @@
   (interval (cycle-nth :second 0) (in-duration (:value %2)) false)
 
   "by <time>"; if time is interval, take the start of the interval (by tonight = by 6pm)
-  [#"(?i)(a(z|ż))? ?do" (dim :time)]
+  [#"(?i)(a[zż] )?do" (dim :time)]
   (interval (cycle-nth :second 0) %2 false)
 
   "by the end of <time>"; in this case take the end of the time (by the end of next week = by the end of next sunday)
-  [#"(?i)do (końca|konca)? (tego)?" (dim :time)]
+  [#"(?i)do (ko[ńn]ca )?(tego)?" (dim :time)]
   (interval (cycle-nth :second 0) %2 true)
 
   ; One-sided Intervals
 
   "until <time-of-day>"
-  [#"(?i)(aż|z)? ?do|przed" (dim :time)]
+  [#"(?i)(a[żz] )?do|przed" (dim :time)]
   (merge %2 {:direction :before})
 
   "after <time-of-day>"
