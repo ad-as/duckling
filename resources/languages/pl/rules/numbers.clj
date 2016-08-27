@@ -28,7 +28,7 @@
  ;; {:dim :number :integer true :value 10 :grain 1}
 
  "one"
- #"(?i)jed(en|nego|nemu|nym|na|nej|n(a|ą))"
+ #"(?i)jed(en|nego|nemu|nym|nej|n(a|ą))"
  {:dim :number :integer true :value 1 :grain 1}
  
  "two"
@@ -120,7 +120,7 @@
  {:dim :number :integer true :value 12 :grain 1 :grouping true} ;;restrict composition and prevent "2 12"
 
  "hundred"
- #"(?i)sto|setki"
+ #"(?i)(sto|setki)"
  {:dim :number :integer true :value 100 :grain 2}
 
  "thousand"
