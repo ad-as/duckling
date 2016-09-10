@@ -11,7 +11,7 @@
 
 (
   "second (cycle)"
-  #"(?i)sekund(y|zie|(e|ę)|(a|ą)|om|ami|ach|o)?"
+  #"(?i)sekund(y|zie|[eę]|om|ami|ach|o|[aą])?"
   {:dim :cycle
    :grain :second}
 
